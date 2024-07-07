@@ -1,0 +1,2 @@
+
+python -u main.py --is_training 0 --root_path ./dataset/PEMS/ --checkpoints ./check48_4/ --data_path PEMS04.npz --model_id PEMS04 --model AutoMixer --data PEMS --features M --seq_len 48 --label_len 0 --pred_len 48 --e_layers 5 --d_layers 1 --factor 3 --enc_in 307 --dec_in 307 --c_out 307 --des 'Exp' --itr 1 --use_norm 0  --channel_independence 0 --d_model 128 --d_ff 256 --batch_size 128 --learning_rate 0.002 --train_epochs 20 --patience 10 --down_sampling_layers 2 --down_sampling_method avg --down_sampling_window 2 --gpu 2 --op_num 2
