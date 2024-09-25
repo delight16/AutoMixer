@@ -2,7 +2,7 @@
 
 #export CUDA_VISIBLE_DEVICES=0
 # model_name=AutoCTS+
-model_name=TimeMixer
+model_name=AutoMixer
 is_training=2
 seq_len=336
 down_sampling_layers=2
