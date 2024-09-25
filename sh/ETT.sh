@@ -1,6 +1,6 @@
 # export CUDA_VISIBLE_DEVICES=0
 
-model_name=TimeMixer
+model_name=AutoMixer
 
 seq_len=336
 e_layers=2
