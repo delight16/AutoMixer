@@ -29,6 +29,9 @@ bash train3.sh
 bash train4.sh
 bash train7.sh
 bash train8.sh
+bash weather.sh
+bash solar.sh
+bash ETT.sh
 ```
 
 
