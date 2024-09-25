@@ -20,7 +20,7 @@
 
 # export CUDA_VISIBLE_DEVICES=4,5
 
-model_name=TimeMixer
+model_name=AutoMixer
 # model_name=Autostg
 
 # model_name=AutoCTS+
