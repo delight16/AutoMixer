@@ -1,0 +1,103 @@
+---
+
+model:
+  #name: METR_LA_AutoSTG
+  num_mixed_ops: 6
+  candidate_op_profiles: [
+    [Zero, {
+
+    }],
+    [Identity, {
+
+    }],
+    # [Linear, {
+
+    # }],
+    # [AvgPool, {
+
+    # }],
+    # [MaxPool, {
+
+    # }],
+
+    # [avg_pool_3x3, {
+
+    # }],
+    # [max_pool_3x3, {
+
+    # }],
+    [sep_conv_3x3, {
+
+    }],
+    # [sep_conv_5x5, {
+
+    # }],
+    # [sep_conv_7x7, {
+
+    # }],
+    # [dil_conv_3x3, {
+
+    # }],
+    # [dil_conv_5x5, {
+
+    # }],
+    # [conv_7x1_1x7, {
+
+    # }],
+    # [FcDown, {
+
+    # }],
+    # [MaxDown, {
+
+    # }],
+    # [AvgDown, {
+
+    # }],
+    # [ConvDown, {
+
+    # }],
+    # [trans, {
+
+    # }],
+    # [s_trans, {
+
+    # }],
+  ]
+  candidate_op_profiles2: [
+    [Zero, {
+
+    }],
+    [Identity, {
+
+    }],
+    [Conv, {
+      type_name: fc,
+      kernel_size: [1,1],
+      stride: [1,1],
+      padding: [0,0],
+      dilation: [1,1],
+      use_bn: True,
+      dropout: 0
+    }],
+    [MetaConv, {
+      type_name: tc,
+      node_in_hidden: 32,
+      meta_hiddens: [8,4],
+      kernel_size: [1,3],
+      stride: [1,1],
+      padding: [0,1],
+      dilation: [1,1],
+      use_bn: True,
+      dropout: 0
+    }],
+    [MetaGraphConv, {
+      edge_in_hidden: 32,
+      meta_hiddens: [8,4],
+      num_graphs: 4,
+      order: 2,
+      use_bn: True,
+      dropout: 0.3
+    }],
+  ]
+  layer_names: [STCell, AvgPooling, STCell, STCell, AvgPooling, STCell, STCell]
+
