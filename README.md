@@ -20,7 +20,7 @@ pip install -r requirements.txt
 
 ## Running the code
 
-You can get into the folder ./script and use following command to test code:
+You can get into the folder ./scripts and use following command to test code:
 
 
 ```bash 
